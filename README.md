@@ -1,5 +1,5 @@
 This is a Movie Portal Application created using React.js
-The website for the this application is : https://earnest-flan-d33cd4.netlify.app/
+The website for the this application is : https://musical-rabanadas-e5197b.netlify.app/
 
 For Cloning git clone ‘the code URL of the github repo’
 
