@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	font-family: 'Roboto', sans-serif;	
+	background-color: #111;
+color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+	padding: 50px 15px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header h1 {
+	color: #FFF;
+	font-size: 48px;
+	font-weight: 500;
+	text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section {
+	padding: 15px;
+}
+
+.searchbox {
+	display: block;
+	width: 100%;
+	padding: 15px;
+
+	border: none;
+	outline: none;
+	background: none;
+
+	background-color: #EEE;
+	border-radius: 8px;
+
+	color: #53565A;
+	font-size: 20px;
+	font-weight: 300;
+
+	transition: 0.4s ease-out;
+}
+
+.searchbox:focus {
+	box-shadow: 0px 0px 8px 3px #4484C4;
+}
+
+.results {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px;
+}
+
+.results .result {
+	width: 33.333%;
+	min-width: 250px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+.favourite{
+	margin-top: 100px;
+	color: brown;
+
+}
+.favourite >h1 {
+	color: brown;
+	font-family: 'Dancing Script', cursive;
+}
+.results .result img {
+	display: block;
+	width: 100%;
+	transition: transform 450ms;
+}
+.results .result :hover img {
+	transform: scale(1.08);
+}
+.results .result h3 {
+	color: #FFF;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 10px;
+	margin-top: 20px;
+	
+
+
+	transition: 0.4s ease-out;
+}
+
+.results .result:hover h3 {
+	
+	color: #223343;
+}
+.results .result:hover img {
+	transform: scale(1.08);
+}
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #111;
+
+	overflow-y: scroll;
+}
+
+.popup .content {
+	display: block;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 25px;
+
+	color: #FFF;
+}
+
+.popup .content h2 {
+	font-size: 50px;
+	font-weight: 600;
+}
+
+.popup .content .rating {
+	margin-bottom: 30px;
+	font-size: 14px;
+	margin-top: 8px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.popup .content .plot {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px 30px;
+}
+
+.popup .content .plot img {
+	flex: 1 1 50%;
+	max-width: 300px;
+	padding: 0px 15px;
+}
+
+.popup .content .plot p {
+	flex: 1 1 50%;
+	padding: 15px;
+}
+
+.popup .content .close {
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 12px;
+	font-weight: 700;
+
+	background: #EF8094;
+	color: #FFF;
+	border-radius: 300px;
+	border: 4px solid black;
+	outline: none;
+	appearance: none;
+	cursor: pointer;
+margin-right: 15px;
+	transition: 0.4s ease-out;
+	color: #111;
+}
+
+.popup .content .close:hover {
+	background: #e8ecf0;
+}
+.details{
+	display: block;
+	margin-bottom: 50px;
+	
+}
+.detail{
+	
+	margin-left: 50px;
+	color: #4484C4;
+}
+
+.user-Rating{
+margin-top: 100px;
+}
+
+.rating-head{
+	margin-left: 300px;
+	margin-top: 120px;
+}
+.star{
+	position: relative;
+	left: 230px;
+	bottom: 12px;;
+}
+.review-para{
+	position: relative;
+	left: 70px;
+	color: #4484C4;
+	display: inline;
 }
